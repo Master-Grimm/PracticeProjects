@@ -1,1 +1,1 @@
-# PracticeProjects
+Reposytory for my practice projects
