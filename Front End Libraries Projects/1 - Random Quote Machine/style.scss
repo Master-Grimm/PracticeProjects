@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Playfair+Display&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  position:relative;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quote-box {
+  border-radius:20px;
+  position: relative;
+  margin: 5% auto auto auto;
+  padding:35px 45px;
+  display:table;
+  background-color:#1E1E26;
+   .quote-text {
+    i{
+      font-size:1.0em;
+      margin-right: 0.1em;
+      margin-left: 0.1em;
+    }
+
+    text-align:center;
+    width:350px;
+    height:250px;
+    clear:both;
+    font-size:1.65em;
+  }
+    .quote-text .aligner {
+      display: table-cell;
+      height: inherit;
+      width: inherit;
+      vertical-align: middle;
+      }
+  .quote-author {
+    width:350px;
+    height:auto;
+    padding-top:10px;
+    font-size:1.2em; 
+    text-align:right;
+    font-family: 'Indie Flower', cursive;
+  }
+  .buttons {
+    width:350px;
+    .button {
+      height:2.5em;
+      width:120px;
+      border: 1px solid;      
+      border-radius:8px;
+      color:#1E1E26;
+      outline:none;
+      font-family: 'Permanent Marker', cursive;
+      font-size:1em; 
+      margin-top:20px;
+      opacity:1;
+      cursor:pointer;
+      
+      &:hover {
+        opacity:0.9;
+        border-color:#CCC;
+      }
+      &#tumblr-quote {
+        float:right;
+        padding:3px;
+        text-align:center;
+        font-size:1.3em;
+        margin-right:5px;
+        height:30px;
+        width:35px;
+      }
+      &#tweet-quote {
+        float:left;
+        padding:3px;
+        text-align:center;
+        font-size:1.35em;
+        margin-left:5px;
+        height:30px;
+        width:35px;
+      }
+      &#new-quote {
+    margin-top: 10px;
+    margin-left: -120px; 
+    position:relative;
+    left:50%;
+      }
+    }
+  }  
+}

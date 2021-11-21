@@ -1,0 +1,114 @@
+<head>
+<title>MSF Survey Form</title>        
+<LINK REL="Stylesheet" href="style.css" TYPE="text/css">
+<LINK rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <h1 id="title" class="text-center">Militaires Sans Frontières Survey Form</h1>
+      <p id="description" class="description text-center">Thank you for taking the time to help us improve Motherbase</p>
+    </header>
+    <form id="survey-form">
+      
+      <div class="form-group">
+        <label id="name-label" for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+      </div>
+      
+      <div class="form-group">
+        <label id="email-label" for="email">Email</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+      </div>
+      
+      <div class="form-group">
+        <label id="number-label" for="number">Age<span class="clue">(optional)</span></label>
+        <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+      </div>
+      
+      <div class="form-group">
+        <p>What is your current division?</p>
+        <select id="dropdown" name="role" class="form-control" required>
+          <option disabled selected value>Select current division</option>
+          <option value="student">Combat Unit</option>
+          <option value="job">Security Team</option>
+          <option value="learner">R&D Team</option>
+          <option value="preferNo">Base Development Unit</option>
+          <option value="other">Support Unit</option>
+          <option value="other">Medical Unit</option>
+          <option value="other">Intel Unit</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <p>Would you recommend a friend to join MSF?</p>
+        <label>
+          <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked />Definitely
+        </label>
+        <label>
+          <input name="user-recommend" value="absolutely" type="radio" class="input-radio" />Absolutely
+        </label>
+        <label>
+          <input name="user-recommend" value="surely" type="radio" class="input-radio" />Surely
+        </label>
+      </div>
+  
+      <div class="form-group">
+        <p>
+          What is your favorite feature of MSF?
+        </p>
+        <select id="most-like" name="mostLike" class="form-control" required>
+          <option disabled selected value>Select an option</option>
+          <option value="peace">Saving the peace by intervening wars all over world</option>
+          <option value="base">Building sea base in the middle of nowhere</option>
+          <option value="infiltrating">Infiltrating enemies base</option>
+          <option value="parasites">Treating vocal parasites</option>
+          <option value="robots">Building giant robots armed with nukes</option>
+          <option value="boss">Training with Big Boss</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <p>What would you like to see improved?
+          <span class="clue">(Check all that apply)</span> </p>
+        <label>
+          <input name="prefer" value="weapon" type="checkbox" class="input-checkbox" />Our Great Weapon Arsenal
+        </label>
+        <label>
+          <input name="prefer" value="accessories" type="checkbox" class="input-checkbox" />Our Crafty Battle Accessories
+        </label>
+        <label>
+          <input name="prefer" value="tools" type="checkbox" class="input-checkbox" />Our Tricky Spying Tools
+        </label>      
+        <label>
+          <input name="prefer" value="box" type="checkbox" class="input-checkbox" />Our Magnificent Cardboard Boxes
+        </label>    
+        <label>
+          <input name="prefer" value="vehicles" type="checkbox" class="input-checkbox" />Our Mighty Powerful Vehicles
+        </label>              
+        <label>
+          <input name="prefer" value="security" type="checkbox" class="input-checkbox" />Our Top-Tech Security System
+        </label>          
+        <label>
+          <input name="prefer" value="perfect" type="checkbox" class="input-checkbox" />Nothing Can Be Improved Everything is Perfect Already
+        </label>                   
+      </div>
+  
+      <div class="form-group">
+        <p>Any comments or suggestions?</p>
+        <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+      </div>
+  
+      <div class="form-group">
+        <button type="submit" id="submit" class="submit-button">
+          Submit
+        </button>
+      </div>
+      
+    </form>
+  </div>
+
+  <script src="index.js"></script>
+
+</body>
