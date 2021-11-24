@@ -1,0 +1,90 @@
+$main-gray: #2A2F35;
+$shadow: 3px 3px 10px 3px darken($main-gray, 15%);
+$default-border: 4px solid darken($main-gray, 30%);
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lighten($main-gray, 65%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+}
+
+.calculator {
+  box-shadow: $shadow;
+  border: $default-border;
+  background-color: $main-gray;
+  height: 380px;
+  width: 248px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.display {  
+  border: $default-border;
+  background-color: #7A977B;
+  color: $main-gray;
+  position:relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-family: 'Major Mono Display', monospace;
+  width: 95%;
+  height: 70px;
+  font-size: 23px;
+  font-weight: bolder;
+  margin: auto;
+  padding:8px;
+}
+
+.nums-container{
+  width: 75%;
+}
+
+.ops-container{
+  width: 25%;
+}
+
+button {
+  border-radius: 15%;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  background-color: darken(#E5E5E5, 5%);
+  color: darken($main-gray, 30%);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+}
+
+button:active {
+  transform: scale(1.1);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+button.ops {
+  background-color: darken(#ffeaa7, 5%);
+}
+
+button.AC{
+  width: 110px;
+  background-color: #9A3A3C; 
+}
+
+button.CE{
+  background-color: #C17C7C;
+}
+
+button.equal{
+  width: 110px;
+  background-color: #5AB5A8;
+ position: relative;
+ right: 60px;
+}
