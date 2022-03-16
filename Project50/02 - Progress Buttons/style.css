@@ -32,7 +32,7 @@ body {
   position: relative;
   margin-bottom: 50px;
   max-width: 95%;
-  width: 650px;
+  width: 350px;
 }
 
 .progress-container::before {
@@ -93,8 +93,8 @@ body {
   font-family: inherit;
   padding: 8px 30px;
   margin: 5px;
-  font-size: 24px;
-  width: 100px;
+  font-size: 20px;
+  width: 80px;
   display: flex;
   flex-flow: row;
   justify-content: center;
