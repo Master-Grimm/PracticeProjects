@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-blue);
+  color: var(--main-gray);
+  overflow-x: hidden;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--main-white);
+  transform-origin: top left;
+  transition: transform 0.8s;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.container.show-nav {
+  transform: rotate(-25deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  background-color: var(--main-red);
+  height: 180px;
+  width: 180px;
+  border-radius: 10%;
+  position: relative;
+  transition: transform 0.8s linear;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-90deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 40px;
+  color: var(--main-white);
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  left: 64%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.2s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: var(--main-white);
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-200%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-400%);
+}
+
+nav a {
+  color: var(--main-white);
+  text-decoration: none;
+  transition: all 1s;
+}
+
+nav a:hover {
+  color: var(--main-red);
+}
+
+.content img {
+  max-width: 95%;
+  padding: 20px;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h4 {
+  margin: 0;
+  font-style: italic;
+}
+
+.content h5 {
+  margin: 0;
+  font-style: italic;
+  padding-right: 7%;
+  float: right;
+}
+
+.content p {
+  color: var(--main-gray);
+  line-height: 1.4;
+}
