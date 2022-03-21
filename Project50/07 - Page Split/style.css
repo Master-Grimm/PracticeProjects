@@ -1,0 +1,101 @@
+:root {
+  --focus-width: 80%;
+  --remain-width: 20%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background-color: #9e2434;
+}
+
+.split.left::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.split.right {
+  right: 0;
+  background-color: #45567d;
+}
+
+.split.right::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.split.right,
+.split.left,
+.split.right::before,
+.split.left::before {
+  transition: all 1500ms ease-in-out;
+}
+
+.hover-left .left {
+  width: var(--focus-width);
+}
+
+.hover-left .right {
+  width: var(--remain-width);
+}
+
+.hover-right .right {
+  width: var(--focus-width);
+}
+
+.hover-right .left {
+  width: var(--remain-width);
+}
+
+h1 {
+  font-size: 48px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+h2 {
+  font-size: 24px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translateX(-50%);
+}
+
+.split.right h1,
+.split.right h2 {
+  color: #fff;
+}
+
+.split.left h1,
+.split.left h2 {
+  color: #000;
+}
