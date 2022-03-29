@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --default-border: 2px solid;
+  --default-shadow: 3px 3px 5px 3px var(--main-blue);
+  --active-shadow: 3px 3px 5px 3px var(--main-red);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+}
+
+h1 {
+  margin: 50px 0 30px;
+  text-align: center;
+}
+
+.faq-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.section {
+  background-color: var(--main-blue);
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 5px;
+  margin: 15px 0;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  transition: 1000ms;
+}
+
+.section.active {
+  background-color: var(--main-red);
+  box-shadow: var(--active-shadow);
+}
+
+.title {
+  margin: 0 35px 0 0;
+}
+
+.text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.section.active .text {
+  display: block;
+}
+
+.toggle {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  padding: 0;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+  color: var(--main-white);
+}
+
+.toggle:focus {
+  outline: 0;
+}
+
+.toggle .fa-square-xmark {
+  display: none;
+}
+
+.section.active .toggle .fa-square-xmark {
+  display: block;
+}
+
+.section.active .toggle .fa-circle-question {
+  display: none;
+}

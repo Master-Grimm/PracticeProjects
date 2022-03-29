@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Permanent+Marker&family=Playfair+Display&display=swap');
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --default-border: 2px solid;
+  --default-shadow: 10px 10px 50px 5px;
+}
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  font-family: 'Playfair Display', serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 50px;
+  width: 400px;
+  background-color: var(--main-gray);
+  margin: 10px;
+}
+
+.quote,
+i,
+.author {
+  color: var(--main-white);
+}
+
+.quote {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.author {
+  margin: 10px;
+  text-align: right;
+  font-size: 28px;
+  font-style: italic;
+  font-family: 'Indie Flower', cursive;
+}
+
+hr {
+  margin: 10px 0;
+  width: 100%;
+  border: 2px solid var(--main-white);
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.next {
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px;
+  margin-top: 5px;
+  font-weight: bold;
+  color: var(--main-white);
+  background-color: var(--main-blue);
+}
