@@ -10,7 +10,7 @@ counters.forEach((counter) => {
     const increment = target / 250
 
     if (count < target) {
-      counter.innerText = `${Math.ceil(count + increment)}`
+      counter.innerText = `${Math.round(count + increment)}`
       setTimeout(updateCounter, 5)
     } else {
       counter.innerText = target
