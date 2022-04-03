@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --default-border: 2px solid var(--main-white);
+  --default-shadow: 0px 0px 150px 10px var(--main-red);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--main-red);
+  color: var(--main-white);
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  padding: 80px 50px;
+  overflow: hidden;
+  margin: 20px;
+  position: relative;
+  width: 320px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button .square {
+  position: absolute;
+  background-color: var(--main-white);
+  width: 100px;
+  height: 100px;
+  border-radius: 5%;
+  transform: translate(-50%, -50%) scale(0);
+  animation: scale 750ms ease-out;
+}
+
+button:nth-of-type(even) {
+  background-color: var(--main-blue);
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
