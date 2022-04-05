@@ -1,0 +1,61 @@
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --default-border: 3px solid var(--main-gray);
+  --drag-border: 4px solid var(--main-white);
+  --hovered-border: 6px dashed var(--main-white);
+  --default-shadow: 0px 0px 10px 3px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 20px;
+  border: var(--default-border);
+  background: var(--main-white);
+  box-shadow: var(--default-shadow);
+}
+
+.fill {
+  background-image: url('https://source.unsplash.com/random/150x150');
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
+
+.hold {
+  border: var(--drag-border);
+}
+
+.hovered {
+  background-color: var(--main-blue);
+  border: var(--hovered-border);
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+  }
+}
