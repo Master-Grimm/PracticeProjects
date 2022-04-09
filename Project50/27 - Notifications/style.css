@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: rgb(42, 47, 53);
+  --default-border: 3px solid var(--main-gray);
+  --default-shadow: 0px 0px 10px 3px var(--main-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.btn,
+.btn-small {
+  background-color: var(--main-white);
+  color: var(--main-red);
+  font-family: inherit;
+  font-size: 18px;
+  padding: 16px;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+}
+
+.btn:focus,
+.btn-small:focus {
+  outline: none;
+}
+
+.btn:active,
+.btn-small:active {
+  transform: scale(0.95);
+}
+
+.btn-small {
+  font-size: 14px;
+  padding: 8px 20px;
+}
+
+.notifications {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.notification {
+  background-color: var(--main-gray);
+  border-radius: 5px;
+  padding: 16px 32px;
+  margin: 0.5rem;
+  position: relative;
+}
+
+.notification.success {
+  color: greenyellow;
+}
+
+.notification.info {
+  color: yellow;
+}
+
+.notification.alert {
+  color: orangered;
+  font-size: 20px;
+}
