@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-gray: #2a2f35;
+  --default-border: 2px solid var(--main-white);
+  --default-shadow: 0px 0px 10px 3px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 320px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.fa-heart {
+  color: var(--main-red);
+}
+
+.likeMe {
+  border-radius: 10px;
+  height: 400px;
+  width: 300px;
+  margin: 10px auto;
+  background: url('https://source.unsplash.com/random/Art') no-repeat center
+    center/cover;
+
+  cursor: pointer;
+  max-width: 100%;
+  position: relative;
+  box-shadow: var(--default-shadow);
+  overflow: hidden;
+}
+
+.likeMe .fa-heart {
+  position: absolute;
+  animation: grow 1000ms;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+  to {
+    transform: translate(-50%, -50%) scale(7);
+    opacity: 0;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  border: var(--default-border);
+  border-radius: 20px;
+  font-family: inherit;
+  font-size: 20px;
+  padding: 12px 20px;
+  color: var(--main-white);
+  cursor: pointer;
+  margin-top: 18px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}

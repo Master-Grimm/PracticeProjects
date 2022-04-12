@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: rgb(42, 47, 53);
+  --profile-border: 5px solid var(--main-white);
+  --profile-shadow: 2px 2px 8px 0px var(--main-white);
+  --default-border: 3px solid var(--main-gray);
+  --default-shadow: 3px 3px 10px 2px var(--main-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.user-form {
+  width: 94%;
+  max-width: 700px;
+}
+
+.user-form input {
+  width: 100%;
+  display: block;
+  background-color: var(--main-gray);
+  border: none;
+  border-radius: 10px;
+  color: var(--main-white);
+  padding: 15px;
+  margin-bottom: 24px;
+  font-family: inherit;
+  font-size: 18px;
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+}
+
+.user-form input::placeholder {
+  color: var(--main-white);
+}
+
+.user-form input:focus {
+  outline: none;
+}
+
+.card {
+  max-width: 600px;
+  background-color: var(--main-gray);
+  border-radius: 5px;
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  display: flex;
+  align-items: center;
+  padding: 42px;
+  margin: 10px 20px;
+}
+
+.avatar {
+  border-radius: 10px;
+  border: var(--profile-border);
+  box-shadow: var(--profile-shadow);
+  height: 160px;
+  width: 160px;
+  margin: 20px;
+}
+
+.user-info {
+  color: var(--main-white);
+  margin: 8px 16px;
+}
+
+.user-info ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.user-info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.user-info ul li strong {
+  font-size: 14px;
+  margin: 8px;
+}
+
+.repo {
+  text-decoration: none;
+  color: var(--main-white);
+  background-color: var(--main-blue);
+  font-size: 12px;
+  padding: 5px 10px;
+  margin: 4px;
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-form {
+    max-width: 350px;
+  }
+
+  .card {
+    max-width: 375px;
+  }
+}
