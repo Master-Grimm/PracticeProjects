@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Typing Animation</title>
+  </head>
+  <body>
+    <form>
+      <label for="usr-string">Enter text you want to animate</label>
+      <input
+        type="text"
+        name="usr-string"
+        id="usr-string"
+        required
+        minlength="4"
+        maxlength="21"
+        size="21"
+        placeholder="Max 21 char"
+      />
+    </form>
+
+    <div id="string-container" class="string-container">
+      <h1 id="text">Example string</h1>
+    </div>
+
+    <div id="inputs-container" class="inputs-container">
+      <label for="speed">Speed:</label>
+      <input
+        type="number"
+        name="speed"
+        id="speed"
+        value="1"
+        min="1"
+        max="9"
+        step="1"
+      />
+      <label for="times">Times:</label>
+      <input
+        type="number"
+        name="times"
+        id="times"
+        value="1"
+        min="1"
+        max="9"
+        step="1"
+      />
+    </div>
+    <button class="run" id="run">Run Animation</button>
+    <script src="script.js"></script>
+  </body>
+</html>
