@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-gray: #2a2f35;
+  --main-light-gray: #98a5b4;
+  --default-border: 2px solid var(--main-white);
+  --default-dark-border: 3px solid black;
+  --default-shadow: 0px 1px 4px 2px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 50px;
+}
+
+.add {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  background-color: var(--main-red);
+  color: var(--main-white);
+  border: var(--default-border);
+  border-radius: 10px;
+  font-size: 18px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.add:active {
+  transform: scale(0.95);
+}
+
+.sticker {
+  background-color: var(--main-white);
+  border: var(--default-dark-border);
+  box-shadow: var(--default-shadow);
+  margin: 30px 20px;
+  height: 350px;
+  width: 350px;
+  overflow-y: scroll;
+  font-size: 14px;
+}
+
+.sticker .tools {
+  background-color: var(--main-red);
+  border-bottom: var(--default-dark-border);
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.sticker .tools button {
+  background-color: transparent;
+  border: none;
+  color: var(--main-white);
+  cursor: pointer;
+  margin: 0 4px;
+}
+
+.sticker .tools .edit,
+.sticker .tools .delete {
+  font-size: 18px;
+  border: var(--default-border);
+  border-radius: 10%;
+}
+
+.sticker textarea {
+  background-color: var(--main-light-gray);
+  outline: none;
+  font-family: inherit;
+  font-size: 18px;
+  border: none;
+  height: 300px;
+  width: 100%;
+  padding: 16px;
+}
+
+.stickerText {
+  padding: 16px;
+}
+
+.hidden {
+  display: none;
+}
