@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --default-border: 2px solid var(--main-white);
+  --default-shadow: 0px 0px 10px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.numers-container,
+.end {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+}
+
+.end {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.end.nowYouSeeMe {
+  transform: translate(-50%, -50%) scale(1);
+  animation: nowYouSeeMe 500ms;
+}
+
+@keyframes nowYouSeeMe {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.numers-container {
+  transform: translate(-50%, -50%);
+}
+
+.numers-container.nowYouDont {
+  transform: translate(-50%, -50%) scale(0);
+  animation: nowYouDont 500ms;
+}
+
+@keyframes nowYouDont {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.numbers {
+  font-size: 60px;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 60px;
+}
+
+.numbers span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  transform-origin: bottom center;
+}
+
+.numbers span.in {
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: goIn 500ms;
+}
+
+.numbers span.out {
+  animation: goOut 500ms;
+}
+
+@keyframes goIn {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+
+  10% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+}
+
+@keyframes goOut {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  90% {
+    transform: translate(-50%, -50%) rotate(-120deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-180deg);
+  }
+}
+
+.replay {
+  background-color: transparent;
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 50%;
+  font-size: 24px;
+  padding: 8px;
+  color: var(--main-white);
+  cursor: pointer;
+}
+
+.replay:active {
+  transform: scale(0.95);
+}
