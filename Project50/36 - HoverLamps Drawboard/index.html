@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>HoverLamps Drawboard</title>
+  </head>
+  <body>
+    <div class="starter" id="starter">
+      <h2>How many lamps do you need?</h2>
+      <div class="picker">
+        <button class="pick" id="ch1">200</button>
+        <button class="pick" id="ch2">400</button>
+        <button class="pick" id="ch3">600</button>
+      </div>
+    </div>
+
+    <div class="board-container hide" id="board-container">
+      <div class="buttons-container">
+        <button class="btn on" id="all-off">
+          <i class="fa-solid fa-lightbulb"></i>
+        </button>
+        <span>HoverLamps Drawboard</span>
+        <button class="btn off" id="all-on">
+          <i class="fa-solid fa-lightbulb"></i>
+        </button>
+      </div>
+
+      <div class="board" id="board"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
