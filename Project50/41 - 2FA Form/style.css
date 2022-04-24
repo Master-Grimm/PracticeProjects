@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --main-mid-blue: #2c3e50;
+  --default-border: 3px solid var(--main-white);
+  --default-shadow: 0px 0px 10px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: var(--main-red);
+  color: var(--main-white);
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 375px;
+  text-align: center;
+}
+
+.digits-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.digit {
+  caret-color: transparent;
+  color: var(--main-white);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 42px;
+  height: 65px;
+  width: 53px;
+  border: var(--default-border);
+  background-color: var(--main-mid-blue);
+  margin: 3px;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.digit::-webkit-outer-spin-button,
+.digit::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.digit:valid {
+  background-color: var(--main-blue);
+  box-shadow: var(--default-shadow);
+}
+
+.info {
+  background-color: var(--main-gray);
+  border: var(--default-border);
+  font-size: 16px;
+  display: inline-block;
+  padding: 15px;
+  max-width: 85%;
+  color: var(--main-white);
+  border-radius: 15px;
+}
