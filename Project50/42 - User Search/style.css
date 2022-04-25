@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-ash: #e5e5e598;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --main-mid-blue: #2c3e50;
+  --default-border: 3px solid var(--main-gray);
+  --light-border: 2px solid var(--main-white);
+  --default-shadow: 1px 1px 12px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 15px;
+  overflow: hidden;
+  width: 350px;
+}
+
+.header {
+  border-bottom: var(--default-border);
+  background-color: var(--main-red);
+  color: var(--main-white);
+  padding: 40px 30px;
+}
+
+input {
+  background-color: var(--main-mid-blue);
+  border: var(--light-border);
+  border-radius: 10px;
+  color: var(--main-white);
+  font-size: 18px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+input::placeholder {
+  color: var(--main-ash);
+}
+
+input:focus {
+  outline: none;
+}
+
+.user-list {
+  background-color: var(--main-white);
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+li:nth-child(n + 2) {
+  border-top: var(--default-border);
+}
+
+img {
+  border: var(--default-border);
+  border-radius: 5px;
+  object-fit: cover;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.user-info h4 {
+  margin: 0;
+}
+
+p {
+  margin: 5px 0px;
+  font-size: 16px;
+}
+
+.hide {
+  display: none;
+}
