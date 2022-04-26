@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --dark-gray: #1f2327;
+  --main-gray: #2a2f35;
+  --main-mid-blue: #2c3e50;
+  --default-border: 3px solid var(--main-gray);
+  --light-border: 2px solid var(--main-white);
+  --default-shadow: 0px 0px 10px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.form {
+  background-color: var(--main-red);
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 15px;
+  color: var(--main-white);
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+  max-width: 650px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.rates-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  margin: 10px 0 30px 0;
+}
+
+.rate {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  width: 90px;
+  padding: 15px;
+  margin: 10px;
+}
+
+.rate.active i {
+  border-radius: 10px;
+  box-shadow: var(--default-shadow);
+}
+
+.rate img {
+  width: 70px;
+}
+
+p {
+  font-size: 20px;
+  color: var(--dark-gray);
+  display: inline-block;
+  margin: 15px 0 0 0;
+}
+
+.rate:hover p,
+.rate.active p {
+  color: var(--main-white);
+}
+
+.send-btn {
+  font-size: 18px;
+  background-color: var(--main-mid-blue);
+  color: var(--main-white);
+  border: var(--light-border);
+  border-radius: 4px;
+  padding: 12px 18px;
+  cursor: pointer;
+}
+
+.send-btn:focus {
+  outline: 0;
+}
+
+.send-btn:active {
+  transform: scale(0.95);
+}
+
+i {
+  border: var(--light-border);
+  border-radius: 15px;
+  font-size: 70px;
+  margin: 10px;
+  padding: 12px;
+}
+
+@media only screen and (max-width: 680px) {
+  body {
+    overflow: auto;
+    padding: 500px 0px;
+  }
+  .form {
+    max-width: 350px;
+  }
+}
