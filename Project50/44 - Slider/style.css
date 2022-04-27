@@ -1,0 +1,91 @@
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --main-mid-blue: #2c3e50;
+  --default-border: 3px solid var(--main-gray);
+  --default-shadow: 0px 0px 10px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+}
+
+#bar {
+  width: 350px;
+  margin: 18px 0;
+  -webkit-appearance: none;
+}
+
+#bar:focus {
+  outline: none;
+}
+
+label {
+  background-color: var(--main-white);
+  font-size: 22px;
+  position: absolute;
+  top: -35px;
+  left: 145px;
+  width: 60px;
+  padding: 3px;
+  text-align: center;
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+}
+
+/* Chrome */
+#bar::-webkit-slider-runnable-track {
+  background: var(--main-red);
+  border: var(--default-border);
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+}
+
+#bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 45px;
+  background: var(--main-white);
+  border-radius: 5px;
+  border: var(--default-border);
+  transform: translateY(-25%);
+  cursor: pointer;
+}
+
+/* Firefox */
+#bar::-moz-range-track {
+  background: var(--main-red);
+  border: var(--default-border);
+  width: 100%;
+  height: 11px;
+  cursor: pointer;
+}
+
+#bar::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 45px;
+  background: var(--main-white);
+  border-radius: 5px;
+  border: var(--default-border);
+  transform: translateY(-5%);
+  cursor: pointer;
+}
