@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mobile Menu Navigation</title>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <h1>Maximum Security <i class="fa-solid fa-shield"></i></h1>
+      <p>we protect your data</p>
+    </div>
+
+    <button class="open">Menu <i class="fa-solid fa-bars"></i></button>
+
+    <div class="nav nav-red hide">
+      <div class="nav nav-white hide">
+        <div class="nav nav-gray hide">
+          <button class="close">
+            <i class="fa-solid fa-rectangle-xmark"></i>
+          </button>
+
+          <h1>Maximum Security <i class="fa-solid fa-shield"></i></h1>
+
+          <ul class="list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <ul>
+              <li><a href="#">History</a></li>
+              <li><a href="#">Clients</a></li>
+              <li><a href="#">Our works</a></li>
+            </ul>
+            <li><a href="#">Events</a></li>
+            <ul>
+              <li><a href="#">Past</a></li>
+              <li><a href="#">Upcoming</a></li>
+            </ul>
+            <li><a href="#">Contacts</a></li>
+            <ul>
+              <li><a href="#">Europe</a></li>
+              <li><a href="#">USA</a></li>
+              <li><a href="#">Asia</a></li>
+              <li><a href="#">Russia</a></li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
