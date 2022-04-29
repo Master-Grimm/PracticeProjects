@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #681823;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
+  --main-mid-blue: #2c3e50;
+  --default-border: 2px solid var(--main-white);
+  --default-shadow: 0px 0px 10px 0px var(--main-white);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.quiz-container {
+  background-color: var(--main-mid-blue);
+  border: var(--default-border);
+  box-shadow: var(--default-shadow);
+  border-radius: 5px;
+  width: 375px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px 20px 35px 20px;
+}
+
+h2 {
+  padding: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+.question-container {
+  background-color: var(--main-gray);
+  border: var(--default-border);
+  margin: 20px 0px;
+}
+
+.option {
+  font-size: 20px;
+  padding: 10px;
+}
+
+input,
+label {
+  cursor: pointer;
+}
+
+button {
+  background-color: var(--main-blue);
+  color: var(--main-white);
+  border: var(--default-border);
+  border-radius: 10px;
+  margin-top: 20px;
+  height: 50px;
+  width: 150px;
+  cursor: pointer;
+  font-size: 24px;
+  font-family: inherit;
+}
+
+button:hover {
+  box-shadow: var(--default-shadow);
+}
+
+button:focus {
+  outline: none;
+  transform: scale(0.92);
+}

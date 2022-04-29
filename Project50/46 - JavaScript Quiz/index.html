@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>JavaScript Quiz</title>
+  </head>
+  <body>
+    <div class="quiz-container" id="quiz">
+      <div class="question-container">
+        <h2 id="question">Question text</h2>
+      </div>
+
+      <div class="answers-container">
+        <div class="option">
+          <input type="radio" name="answer" id="a" class="answer" />
+          <label for="a" id="a-label">answer</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" name="answer" id="b" class="answer" />
+          <label for="b" id="b-label">answer</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" name="answer" id="c" class="answer" />
+          <label for="c" id="c-label">answer</label>
+        </div>
+
+        <div class="option">
+          <input type="radio" name="answer" id="d" class="answer" />
+          <label for="d" id="d-label">answer</label>
+        </div>
+      </div>
+
+      <button id="submit">Submit</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
