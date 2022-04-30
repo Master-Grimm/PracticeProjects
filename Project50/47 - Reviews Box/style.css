@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-gray: #2a2f35;
+  --default-border: 2px solid var(--main-white);
+  --default-shadow: 2px 2px 16px 0px var(--main-gray);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-red);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  height: 100vh;
+  margin: 0;
+}
+
+.review-container {
+  background-color: var(--main-gray);
+  box-shadow: var(--default-shadow);
+  border: var(--default-border);
+  color: var(--main-white);
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 8px 25px 30px 25px;
+  max-width: 375px;
+}
+
+.user-review {
+  font-size: 22px;
+  text-align: justify;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-photo {
+  border-radius: 10px;
+  border: var(--default-border);
+  height: 110px;
+  width: 110px;
+  object-fit: cover;
+}
+
+.user-props {
+  margin-left: 15px;
+}
+
+.user-name {
+  margin: 0;
+}
+
+.user-position {
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+.progress-bar-container {
+  border: var(--default-border);
+  margin-top: 30px;
+}
+
+.progress-bar {
+  background-color: var(--main-white);
+  height: 8px;
+  width: 100%;
+  animation: grow 8s linear infinite;
+  animation-delay: -1s;
+}
+
+@keyframes grow {
+  0% {
+    transform: scaleX(0);
+  }
+}
+
+.hide {
+  display: none;
+}
