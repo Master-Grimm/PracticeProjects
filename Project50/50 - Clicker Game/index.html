@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clicker Game</title>
+  </head>
+  <body>
+    <div class="screen welcome" id="welcome">
+      <h1>Welcome to clicker game</h1>
+      <h2>Select Difficulty to Start</h2>
+      <ul class="diff-list">
+        <li>
+          <button class="diff-btn">
+            <p>Easy</p>
+            <img src="1.png" alt="4" />
+          </button>
+        </li>
+        <li>
+          <button class="diff-btn">
+            <p>Normal</p>
+            <img src="2.png" alt="3" />
+          </button>
+        </li>
+        <li>
+          <button class="diff-btn">
+            <p>Hard</p>
+            <img src="3.png" alt="2" />
+          </button>
+        </li>
+        <li>
+          <button class="diff-btn">
+            <p>Nightmare</p>
+            <img src="4.png" alt="1" />
+          </button>
+        </li>
+      </ul>
+      <small>
+        INSTRUCTIONS: <br />
+        <br />
+        Each click on the target increases your score.<br />
+        Click as many targets as you can in 20 seconds!<br />
+        <br />
+        The higher the game diffuculty, the less point per click <br />
+        you get. But the spawn time will decrease as well.<br />
+      </small>
+    </div>
+
+    <div class="screen game" id="game">
+      <h3 id="time" class="time">Time: 00 sec</h3>
+      <h3 id="score" class="score">Score: 000</h3>
+      <div id="message" class="message">
+        <h2>
+          Congratulations! <br />
+          You managed to get 0 points in 20 seconds!
+        </h2>
+        <button id="reload" class="reload" onclick="location.reload()">
+          Play Again
+        </button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
