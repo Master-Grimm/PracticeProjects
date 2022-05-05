@@ -1,17 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Trade+Winds&display=swap');
+
 :root {
-  --main-white: #E5E5E5;
-  --main-red: #9E2434;
-  --main-blue: #45567D;
-  --main-gray: #2A2F35;
+  --main-white: #e5e5e5;
+  --main-red: #9e2434;
+  --main-blue: #45567d;
+  --main-gray: #2a2f35;
 }
 
-/* reset */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* box&font sizing */
 *,
 *::before,
 *::after {
@@ -24,7 +24,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* rem for <html> font size, em for current font size */
 @media (max-width: 75em) {
   html {
     font-size: 60%;
@@ -43,10 +42,9 @@ html {
   }
 }
 
-/* base */
 body {
   font-family: 'Indie Flower', sans-serif;
-  font-size: 1.8rem; /* 18px */
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
   color: var(--main-white);
@@ -85,7 +83,6 @@ img {
   width: 100%;
 }
 
-/* nav */
 .nav {
   display: flex;
   justify-content: flex-end;
@@ -108,7 +105,7 @@ img {
     justify-content: center;
   }
 
-.nav-list {
+  .nav-list {
     margin: 0 1rem;
   }
 }
@@ -123,7 +120,6 @@ img {
   background: var(--main-blue);
 }
 
-/* welcome */
 .welcome-section {
   display: flex;
   flex-direction: column;
@@ -141,7 +137,6 @@ img {
   color: var(--main-red);
 }
 
-/* projects */
 .projects-section {
   text-align: center;
   padding: 10rem 2rem;
@@ -215,7 +210,7 @@ img {
 .btn-show-all {
   font-size: 2rem;
   background: var(--main-gray);
-  transition: background 0.3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .btn-show-all:hover {
@@ -232,7 +227,6 @@ img {
   transition: transform 0.3s ease-out;
 }
 
-/* contact */
 .contact-section {
   display: flex;
   flex-direction: column;
@@ -278,7 +272,6 @@ img {
   transform: translateY(5px);
 }
 
-/* footer */
 footer {
   font-weight: 300;
   display: flex;
