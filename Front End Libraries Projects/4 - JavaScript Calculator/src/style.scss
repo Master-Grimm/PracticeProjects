@@ -20,7 +20,7 @@ body {
   border: $default-border;
   background-color: $main-gray;
   height: 380px;
-  width: 248px;
+  width: 348px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -34,7 +34,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   font-family: 'Major Mono Display', monospace;
-  width: 95%;
+  width: 330px;
   height: 70px;
   font-size: 23px;
   font-weight: bolder;
@@ -53,7 +53,7 @@ body {
 button {
   border-radius: 15%;
   height: 50px;
-  width: 50px;
+  width: 75px;
   margin: 5px;
   background-color: darken(#E5E5E5, 5%);
   color: darken($main-gray, 30%);
@@ -74,7 +74,7 @@ button.ops {
 }
 
 button.AC{
-  width: 110px;
+  width: 160px;
   background-color: #9A3A3C; 
 }
 
@@ -83,8 +83,8 @@ button.CE{
 }
 
 button.equal{
-  width: 110px;
+  width: 160px;
   background-color: #5AB5A8;
  position: relative;
- right: 60px;
+ right: 85px;
 }

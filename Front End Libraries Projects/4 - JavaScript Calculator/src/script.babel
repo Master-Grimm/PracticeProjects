@@ -84,7 +84,7 @@ state = {
           calc:e
         });
         
-      }
+      } //default end  
    } // switch end
  
     this.setState({
@@ -99,7 +99,7 @@ state = {
     return (
   <div className='calculator'>
   <p style={{position: 'absolute', opacity: 0, top: 0}}>{JSON.stringify(this.state,null,2)}</p> 
-        <div id='display' className='display'>{calc}</div> 
+        <div id='display' className='display'>{calc.length > 18 ? 'ERROR - YOUR INPUT IS TOO LONG' : calc}</div> 
       <div className='nums-container'>
         <button className='AC' id = 'clear' onClick={this.handleClick}>AC</button>
         <button className='CE' onClick={this.handleClick}>CE</button>
@@ -116,7 +116,7 @@ state = {
       </div>
   </div>
   );
-  } 
+  }  // render end
 } // app end
 
 ReactDOM.render(<App />, document.getElementById('app'));
