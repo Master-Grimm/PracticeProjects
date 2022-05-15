@@ -1,1 +1,1 @@
-50 daily projects
+50 daily JavaScript projects
