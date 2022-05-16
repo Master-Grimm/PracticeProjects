@@ -1,1 +1,1 @@
-Bootstrap, jQuery, Sass, React and Redux practice projects
+Bootstrap, jQuery, Sass, React, Redux, TypeScrips practice projects
