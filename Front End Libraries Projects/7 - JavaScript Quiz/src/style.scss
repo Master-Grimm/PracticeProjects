@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+$main-white: #e5e5e5;
+$main-red: #681823;
+$main-blue: #45567d;
+$main-gray: #2a2f35;
+$main-mid-blue: #2c3e50;
+$default-border: 2px solid $main-gray;
+$default-shadow: 0px 0px 10px 0px $main-gray;
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: $main-white;
+}
+
+main {
+  margin: 32px auto;
+  width: 375px;
+}
+
+h2 {
+  color: $main-gray;
+  font-size: 24px;
+  text-align: center;
+  margin: auto 0;
+}
+
+.question {
+  border: $default-border;
+  border-radius: 10px;
+  margin: 25px 0;
+  box-shadow: $default-shadow;
+  text-align: center;
+  header {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    background-color: lighten($main-blue, 35);
+    border-bottom: $default-border;
+    padding: 10px 20px;
+  }
+  .answer {
+    font-size: 24px;
+  }
+  footer {
+    padding: 10px 20px;
+    border-top: $default-border;
+    border-radius: 0 0 8px 8px;
+    background-color: lighten($main-blue, 40);
+  }
+}
+
+button {
+  background-color: $main-blue;
+  color: $main-white;
+  border: $default-border;
+  border-radius: 10px;
+  height: 40px;
+  width: 90%;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: inherit;
+  &:hover {
+    box-shadow: $default-shadow;
+  }
+  &:active {
+    outline: none;
+    transform: scale(0.94);
+  }
+}
+
+span {
+  transition: all 1500ms ease;
+}
+
+.hidden {
+  color: transparent;
+}
